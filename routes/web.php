@@ -28,7 +28,7 @@ Route::get('user/{nome}', function ($nome) {
 Route::post('user/novo', function (Request $request) {
     $dados = $request->validate([
         'nome' => 'required|string|min:3',
-        'age' => 'required|string',
+        'idade' => 'required|string',
         'tell' => 'required|integer'
     ]);
 
