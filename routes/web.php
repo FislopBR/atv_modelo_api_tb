@@ -16,12 +16,11 @@ Route::get('user/{nome}', function ($nome) {
             'resultado' => [
                 'identificador' => $dados['id'],
                 'nome_do_user' => ucfirst($dados['firstName']),
-                'foto' => $dados['image'],
             ]
         ], 200);
     }
 
-    return response()->json(['error' => 'User não 
+    return response()->json(['error' => 'user não 
     encontrado'], 404);
 });
 
