@@ -15,7 +15,7 @@ class UserController extends Controller
         if ($response->successful()) {
             $user = $response->json();
 
-            return view('user', compact('user'));
+            return view('id', compact('id'));
         }
         return "erro ao buscar dados API";
     }

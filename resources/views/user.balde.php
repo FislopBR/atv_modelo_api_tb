@@ -77,7 +77,7 @@
     </style>
 </head>
 <body>
-    @if(isset($users) && count($users) > 0)
+    @if(isset($id) && count($id) > 0)
         <div class="card">
             <img id="userPhoto" src="" alt="Foto do usuário">
             <div class="card-body">
