@@ -1,13 +1,14 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
+Route::get('user', [UserController::class, 'index']);
 
 Route::get('user/{nome}', function ($nome) {
-    $response = Http::get("https://dummyjson.com/user
-    {$nome}");
+    $response = Http::get("https://dummyjson.com/user/{$nome}");
 
     if ($response->successful()) {
         $dados = $response->json();
